@@ -33,7 +33,7 @@ const ProductDetails = () => {
        axios.post("https://shrouded-lake-15688.herokuapp.com/cart",orderedObj)
        .then(result=>{
            if(result.data.insertedId){
-               console.log(result.data)
+            //    console.log(result.data)
             swal({
                 title: "Great",
                 text: "Product is added",
@@ -53,7 +53,14 @@ const ProductDetails = () => {
             <div className='mt-20 p-6'>
       <h1 className='text-3xl font-bold '>{name}</h1>
     
-   
+   <Rating className=' mt-3 text-orange-500 '
+    emptySymbol="far fa-star"
+    fullSymbol="fas fa-star "
+    initialRating={ratings}
+   readonly
+   >
+   </Rating>
+   <span className='texl-xl ml-5 text-gray-500'>100+ peoples rated</span>
       <p className='py-5 text-gray-500'>{description}</p>
       <p className='py-5  text-orange-500 text-2xl font-bold'>{price} $</p>
       {/* <div className=' w-44 text-center mt-10 mb-10'>

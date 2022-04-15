@@ -1,4 +1,4 @@
-import { faArrowAltCircleRight, faBookJournalWhills, faBookSkull, faCake, faPallet, faPeopleCarry, faPodcast, faPoundSign } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight, faBookJournalWhills, faBookSkull, faCake, faCartPlus, faPallet, faPeopleCarry, faPodcast, faPoundSign, faShoppingBag, faStar, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
@@ -19,18 +19,18 @@ const Dashboard = () => {
             <div className='flex justify-between'>
                 <div className='w-3/3  bg-orange-500 p-10 '>
             <Link to="/dashboard/dash">
-            <p className='text-2xl py-5 font-bold text-white'> <FontAwesomeIcon className='mr-4' icon={faPodcast}></FontAwesomeIcon> Manage Orders</p>
+            <p className='text-2xl py-5 font-bold text-white'> <FontAwesomeIcon className='mr-4' icon={faShoppingBag}></FontAwesomeIcon> Manage Orders</p>
             </Link>
            {admin && <div>
             <Link to="/dashboard/makeadmin">
-            <p className='text-2xl py-5 font-bold text-white'> <FontAwesomeIcon className='mr-4' icon={faPodcast}></FontAwesomeIcon> Make Admin</p>
+            <p className='text-2xl py-5 font-bold text-white'> <FontAwesomeIcon className='mr-4' icon={faUser}></FontAwesomeIcon> Make Admin</p>
             </Link>
             <Link to="/dashboard/addProducts">
-            <p className='text-2xl py-5 font-bold text-white'> <FontAwesomeIcon className='mr-4' icon={faPodcast}></FontAwesomeIcon> Add Product</p>
+            <p className='text-2xl py-5 font-bold text-white'> <FontAwesomeIcon className='mr-4' icon={faCartPlus}></FontAwesomeIcon> Add Product</p>
             </Link>
                </div>}
             <Link to="/dashboard/reviews">
-            <p className='text-2xl py-5 font-bold text-white'> <FontAwesomeIcon className='mr-4' icon={faPodcast}></FontAwesomeIcon> Add Reviews</p>
+            <p className='text-2xl py-5 font-bold text-white'> <FontAwesomeIcon className='mr-4' icon={faStar}></FontAwesomeIcon> Add Reviews</p>
             </Link>
                 </div>
               

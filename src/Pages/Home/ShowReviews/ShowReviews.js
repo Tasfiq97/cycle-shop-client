@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Rating from 'react-rating';
 
 const ShowReviews = () => {
     const [reviews,setReviews]=useState([])
@@ -19,8 +20,13 @@ const ShowReviews = () => {
                             <div className='text-center'>
                             <img className='rounded-lg w-48 h-52 text-center' src={review.img} alt="" />
                             </div>
-                            <h1 className='text-2xl p-5'>{review.email}</h1>
-                            <p className='ml-8 text-xl '>Rating: {review.ratings}</p>
+                            <h1 className='text-2xl p-2'>{review.email}</h1>
+                            <Rating className=' ml-4 text-orange-500 '
+    emptySymbol="far fa-star"
+    fullSymbol="fas fa-star "
+    initialRating={review.ratings}
+   readonly
+   ></Rating>
                             <p className='py-10 text-xl text-gray-400'>{review.description}</p>
                         </div>
                      )
